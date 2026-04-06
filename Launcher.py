@@ -218,7 +218,7 @@ def print_banner():
     """
     print(banner)
     print("Minisoft invisibility Launcher and Configurator, version 26.1.0")
-    print()
+    print()  # 空行分隔
 
 if __name__ == "__main__":
     # Launcher 启动时检测 StartZSKJ 是否已在运行
