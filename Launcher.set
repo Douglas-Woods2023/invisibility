@@ -1,0 +1,5 @@
+ZSKJ=D:\AtHomeVideoStreamer\AtHomeVideoStreamer.exe
+ZSKJAutoStart=True
+ZSKJShowWindow=False
+AutoStartTime=18:55
+AutoStopTime=21:40

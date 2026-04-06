@@ -1,0 +1,15 @@
+2026-04-05 21:00:32,916 [INFO] Target process: AtHomeVideoStreamer.exe
+2026-04-05 21:00:32,916 [INFO] Program path: D:\AtHomeVideoStreamer\AtHomeVideoStreamer.exe
+2026-04-05 21:00:32,916 [INFO] Auto start enabled: True
+2026-04-05 21:00:32,916 [INFO] Show window: False
+2026-04-05 21:00:32,916 [INFO] Auto start time: 18:55
+2026-04-05 21:00:32,916 [INFO] Auto stop time: 21:02
+2026-04-05 21:00:32,916 [INFO] Waiting for auto start time 18:55 ...
+2026-04-05 21:00:32,916 [INFO] Auto start time reached
+2026-04-05 21:00:32,916 [INFO] Entering monitoring loop, press Ctrl+C to exit
+2026-04-05 21:00:33,025 [INFO] Process AtHomeVideoStreamer.exe is not running, attempting to start...
+2026-04-05 21:00:33,043 [INFO] Start command executed: D:\AtHomeVideoStreamer\AtHomeVideoStreamer.exe
+2026-04-05 21:02:38,086 [INFO] Auto stop time reached, terminating target process...
+2026-04-05 21:02:38,086 [INFO] Attempting to kill process: AtHomeVideoStreamer.exe
+2026-04-05 21:02:38,086 [INFO] Terminated AtHomeVideoStreamer.exe (PID: 2208)
+2026-04-05 21:02:38,101 [INFO] Exiting monitoring
