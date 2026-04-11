@@ -1,0 +1,14 @@
+2026-04-11 17:16:24,858 [INFO] Logger initialized. Log file: ./logs/launcher_2026-04-11_17_16_24.log
+2026-04-11 17:16:24,858 [INFO] Reading configuration from Launcher.set
+2026-04-11 17:16:24,875 [INFO] Configuration file closed.
+2026-04-11 17:16:24,875 [INFO] Configuration parsing completed.
+2026-04-11 17:16:25,009 [INFO] StartZSKJ is not running. Auto-starting in background...
+2026-04-11 17:16:25,012 [INFO] Launching StartZSKJ.exe...
+2026-04-11 17:16:25,012 [INFO] StartZSKJ launch thread started (non-blocking)
+2026-04-11 17:16:25,014 [ERROR] Failed to launch StartZSKJ: [WinError 2] 系统找不到指定的文件。
+2026-04-11 17:16:53,654 [INFO] Restarting StartZSKJ...
+2026-04-11 17:16:53,654 [WARNING] No StartZSKJ process found.
+2026-04-11 17:16:54,655 [INFO] Launching StartZSKJ.exe...
+2026-04-11 17:16:54,655 [INFO] StartZSKJ launch thread started (non-blocking)
+2026-04-11 17:16:54,655 [ERROR] Failed to launch StartZSKJ: [WinError 2] 系统找不到指定的文件。
+2026-04-11 17:17:10,966 [INFO] Exiting Launcher. StartZSKJ continues running in background.

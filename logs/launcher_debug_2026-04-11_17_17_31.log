@@ -1,0 +1,14 @@
+2026-04-11 17:17:31,948 [INFO] Logger initialized. Log file: ./logs/launcher_debug_2026-04-11_17_17_31.log
+2026-04-11 17:17:31,948 [INFO] Reading configuration from Launcher.set
+2026-04-11 17:17:31,948 [DEBUG] Configuration lines read: 5
+2026-04-11 17:17:31,948 [DEBUG] setlist = ['ZSKJ=D:\\AtHomeVideoStreamer\\AtHomeVideoStreamer.exe\n', 'ZSKJAutoStart=True\n', 'ZSKJShowWindow=False\n', 'AutoStartTime=18:55\n', 'AutoStopTime=21:40\n']
+2026-04-11 17:17:31,964 [INFO] Configuration file closed.
+2026-04-11 17:17:31,964 [DEBUG] Configuration dictionary created with 5 entries
+2026-04-11 17:17:31,964 [DEBUG] config = {'ZSKJ': 'D:\\AtHomeVideoStreamer\\AtHomeVideoStreamer.exe', 'ZSKJAutoStart': 'True', 'ZSKJShowWindow': 'False', 'AutoStartTime': '18:55', 'AutoStopTime': '21:40'}
+2026-04-11 17:17:31,964 [INFO] Configuration parsing completed.
+2026-04-11 17:17:32,073 [INFO] StartZSKJ is not running. Auto-starting in background...
+2026-04-11 17:17:32,073 [INFO] Launching StartZSKJ.exe...
+2026-04-11 17:17:32,073 [INFO] StartZSKJ launch thread started (non-blocking)
+2026-04-11 17:17:32,073 [DEBUG] ZSKJ=D:\AtHomeVideoStreamer\AtHomeVideoStreamer.exe, AutoStart=True, ShowWindow=False, StartTime=18:55, StopTime=21:40
+2026-04-11 17:17:32,073 [ERROR] Failed to launch StartZSKJ: [WinError 2] 系统找不到指定的文件。
+2026-04-11 17:17:33,088 [INFO] No console mode enabled. Exiting Launcher.

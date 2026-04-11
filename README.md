@@ -1,6 +1,6 @@
 # invisibility
 
-**Version 26.1.0** – Silent launcher and watchdog for AtHomeCamera (掌上看家) with time‑based scheduling.
+**Version 26.2.0** – Silent launcher and watchdog for AtHomeCamera (掌上看家) with time‑based scheduling.
 
 > *Designed for teachers who need to remotely monitor self‑study sessions – no window, no noise, just reliable background operation.*
 
@@ -13,6 +13,32 @@
 
 All logging is written to the `./logs/` folder with timestamps – perfect for troubleshooting.
 
+## New in v26.2.0
+
+### ✨ `restart` command
+
+The Launcher now supports a `restart` command, which stops and then starts the `StartZSKJ` watchdog process in one step. This is useful after changing configuration (e.g., `AutoStartTime`) without having to manually type `stop` followed by `start`.
+
+- **Usage**: `invisibility> restart`
+- **Effect**: Terminates all running `StartZSKJ.exe` instances, then launches a fresh one with the current configuration.
+
+### 🚀 `--no-console` argument
+
+For unattended scenarios (e.g., classroom computers that boot daily), you can now start `Launcher.exe` without entering the interactive shell. The launcher will:
+
+- Read `Launcher.set`
+- Auto‑start `StartZSKJ.exe` if not already running
+- Exit immediately, leaving the watchdog running in the background
+
+**Usage**:
+```bash
+Launcher.exe --no-console
+```
+
+This is ideal for adding to Windows Startup (`shell:startup`) so that the monitoring begins silently without any user interaction.
+
+> **Note**: Even with `--no-console`, you can still use the full interactive shell by omitting the flag. The flag only suppresses the command prompt.
+
 ## Features
 
 - ✅ **Silent start** – No PowerShell window, no application window (optional `show_window` flag available).
@@ -22,6 +48,7 @@ All logging is written to the `./logs/` folder with timestamps – perfect for t
 - ✅ **Interactive configurator** – Change settings on‑the‑fly without editing files.
 - ✅ **Persistent configuration** – Settings are saved to `Launcher.set` and survive reboots.
 - ✅ **English logging** – Clean, searchable logs suitable for automated monitoring.
+- ✅ **New in v26.2.0** – `restart` command and `--no-console` mode for unattended startup.
 
 ## Requirements
 
@@ -78,13 +105,15 @@ AutoStopTime=22:30
 Double-click `Launcher.exe` or run it from command line:
 
 ```bash
-Launcher.exe
+Launcher.exe              # Normal interactive mode
+Launcher.exe --no-console # Silent mode (no console, exits after starting watchdog)
 ```
 
 The launcher will:
 
 - Check if `StartZSKJ.exe` is already running. If not, it will auto‑start it in the background.
-- Display an interactive command prompt: `invisibility>`
+- In normal mode, display an interactive command prompt: `invisibility>`
+- In `--no-console` mode, perform the check/start and then exit immediately.
 
 ### Interactive Commands
 
@@ -92,6 +121,7 @@ The launcher will:
 |--------------------------|-----------------------------------------------------------------|
 | `start`                  | Manually start `StartZSKJ` (if not already running)            |
 | `stop`                   | Terminate all `StartZSKJ` processes immediately                |
+| `restart`                | Stop and restart `StartZSKJ` (apply configuration changes)     |
 | `set <key> <value>`      | Change a configuration value (e.g. `set AutoStopTime 23:00`)    |
 | `upload`                 | Write current configuration to `Launcher.set` (persist changes) |
 | `show`                   | Display current settings and process status                    |
@@ -132,6 +162,7 @@ The output executables will be in the `dist/` folder.
 3. Add a shortcut to `Launcher.exe` in the Windows Startup folder:
    - Press `Win + R`, type `shell:startup`, press Enter.
    - Create a shortcut to `Launcher.exe` inside that folder.
+   - **Tip:** Add `--no-console` to the shortcut target to suppress the interactive shell (e.g., `"C:\invisibility\Launcher.exe" --no-console`).
 4. The program will start silently when the computer boots and begin monitoring according to the schedule.
 
 > **Important:** Set `ZSKJShowWindow=False` to keep the camera window hidden. The teacher can still view the stream via the *AtHomeCamera Viewer* on their phone/PC – the Collector runs invisibly in the background.

@@ -185,11 +185,18 @@ def launch_configurator():
                 print(f"StartZSKJ status: RUNNING (PID {pid})")
             else:
                 print("StartZSKJ status: NOT RUNNING")
+        elif command == "restart":
+            logger.info("Restarting StartZSKJ...")
+            stop_startzskj()
+            time.sleep(1)  # 确保完全停止
+            start_zskj_thread()
+            time.sleep(1)  # 给线程一点时间启动（通常很快）
         elif command == "help":
-            help_msg = """Minisoft invisibility Launcher and Configurator, version 26.1.0
+            help_msg = """Minisoft invisibility Launcher and Configurator, version 26.2.0
 Commands:
     start               Start StartZSKJ (if not already running)
     stop                Stop StartZSKJ (terminate the process)
+    restart             Restart the StartZSKJ
     set <key> <value>   Set a configuration item
     upload              Save current configuration to Launcher.set
     show                Show current configuration and process status
@@ -217,7 +224,8 @@ def print_banner():
                                              
     """
     print(banner)
-    print("Minisoft invisibility Launcher and Configurator, version 26.1.0")
+    print("Minisoft invisibility Launcher and Configurator, version 26.2.0")
+    print("License: MIT License\nauthor: Minisoft Team (Douglas Woods, Juno Zhao, etc.)")
     print()  # 空行分隔
 
 if __name__ == "__main__":
@@ -230,5 +238,10 @@ if __name__ == "__main__":
         start_zskj_thread()   # 自动启动线程
     time.sleep(1)  # 给线程一点时间启动（通常很快）
     print_banner()  # 显示 Banner 和版本信息
-    # 进入交互界面
-    launch_configurator()
+    if "--no-console" in args:
+        # 正常启动但不进入交互界面（以免教学电脑每次开机需要关闭配置器）
+        logger.info("No console mode enabled. Exiting Launcher.")
+        sys.exit(0)
+    else:
+        # 进入交互界面
+        launch_configurator()
