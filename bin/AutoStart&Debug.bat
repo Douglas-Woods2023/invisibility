@@ -1,0 +1,1 @@
+.\Launcher.exe --debug --no-console
