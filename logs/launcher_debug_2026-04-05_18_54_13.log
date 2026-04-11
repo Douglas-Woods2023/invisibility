@@ -1,0 +1,13 @@
+2026-04-05 18:54:13,136 [INFO] Logger initialized. Log file: ./logs/launcher_debug_2026-04-05_18_54_13.log
+2026-04-05 18:54:13,136 [INFO] Reading configuration from Launcher.set
+2026-04-05 18:54:13,136 [INFO] Reading configuration...
+2026-04-05 18:54:13,152 [DEBUG] Configuration lines read: 6
+2026-04-05 18:54:13,152 [DEBUG] setlist = ['ZSKJ=D:\\AtHomeVideoStreamer\\AtHomeVideoStreamer.exe\n', 'ZSKJAutoStart=True\n', 'ZSKJShowWindow=False\n', 'VideoAutoStart=False\n', 'AutoStartTime=18:55\n', 'AutoStopTime=21:31\n']
+2026-04-05 18:54:13,152 [INFO] Configuration file closed.
+2026-04-05 18:54:13,152 [DEBUG] Configuration dictionary created with 6 entries
+2026-04-05 18:54:13,152 [DEBUG] config = {'ZSKJ': 'D:\\AtHomeVideoStreamer\\AtHomeVideoStreamer.exe', 'ZSKJAutoStart': 'True', 'ZSKJShowWindow': 'False', 'VideoAutoStart': 'False', 'AutoStartTime': '18:55', 'AutoStopTime': '21:31'}
+2026-04-05 18:54:13,152 [INFO] Configuration parsing completed.
+2026-04-05 18:54:13,152 [INFO] Launching ZSKJ launcher...
+2026-04-05 18:54:13,152 [INFO] Launching video...
+2026-04-05 18:54:13,152 [DEBUG] ZSKJ = D:\AtHomeVideoStreamer\AtHomeVideoStreamer.exe, ZSKJ_Auto_Start = True, ZSKJ_Show_Window = False, Auto_Start_Time = 18:55, Auto_Stop_Time = 21:31
+2026-04-05 18:54:13,152 [DEBUG] Video_Auto_Start = False, Auto_Start_Time = 18:55, Auto_Stop_Time = 21:31

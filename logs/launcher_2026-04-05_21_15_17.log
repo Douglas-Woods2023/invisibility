@@ -1,0 +1,11 @@
+2026-04-05 21:15:17,764 [INFO] Logger initialized. Log file: ./logs/launcher_2026-04-05_21_15_17.log
+2026-04-05 21:15:17,779 [INFO] Reading configuration from Launcher.set
+2026-04-05 21:15:17,779 [INFO] Reading configuration...
+2026-04-05 21:15:17,779 [INFO] Configuration file closed.
+2026-04-05 21:15:17,779 [INFO] Configuration parsing completed.
+2026-04-05 21:15:17,779 [INFO] Launching ZSKJ launcher...
+2026-04-05 21:15:17,779 [ERROR] Failed to launch ZSKJ launcher: Command not found: ['./StartZSKJ.exe', 'D:\\AtHomeVideoStreamer\\AtHomeVideoStreamer.exe', 'True', 'False', '18:55', '21:31']
+Please ensure the command is installed and in PATH
+2026-04-05 21:16:36,398 [INFO] Configuration updated: AutoStopTime = 21:40
+2026-04-05 21:16:44,012 [INFO] Configuration uploaded to Launcher.set
+2026-04-05 21:17:00,529 [INFO] Exiting Program...
